@@ -21,7 +21,7 @@ COPY . .
 RUN chmod +x ./DevopsGame.x86_64
 
 # Expose poort 8080
-EXPOSE 8080
+EXPOSE 8080/tcp
 
 # Start de Godot dedicated server
-CMD ["./DevopsGame.x86_64"]
+CMD ["./DevopsGame.x86_64", "--headless"]
